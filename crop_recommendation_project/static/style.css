@@ -1,0 +1,180 @@
+/* ===============================
+   GOOGLE FONT
+================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ===============================
+   BACKGROUND
+================================ */
+body {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("../static/bg.jpg");   /* put bg.jpg in static folder */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===============================
+   MAIN CARD
+================================ */
+.container {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===============================
+   HEADING
+================================ */
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1e3c72;   /* BLUE THEME */
+    font-weight: 600;
+}
+
+/* ===============================
+   LABELS & INPUTS
+================================ */
+label {
+    display: block;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #1e3c72;
+    box-shadow: 0 0 6px rgba(30, 60, 114, 0.4);
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.predict-btn {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.predict-btn:hover {
+    transform: scale(1.03);
+    background: linear-gradient(to right, #2a5298, #1e3c72);
+}
+
+.clear-btn {
+    width: 48%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background: #d9534f;
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.clear-btn:hover {
+    background: #c9302c;
+    transform: scale(1.03);
+}
+
+/* ===============================
+   RESULT
+================================ */
+.result {
+    margin-top: 20px;
+    padding: 12px;
+    text-align: center;
+    border-radius: 10px;
+    background: #e8f0ff;
+    color: #1e3c72;
+    font-weight: 500;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* =====================================================
+   GREEN THEME (OPTIONAL)
+   👉 To use: replace BLUE colors with below colors
+===================================================== */
+/*
+.container h1 {
+    color: #2e7d32;
+}
+
+input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 6px rgba(46, 125, 50, 0.4);
+}
+
+.predict-btn {
+    background: linear-gradient(to right, #2e7d32, #66bb6a);
+}
+
+.predict-btn:hover {
+    background: linear-gradient(to right, #66bb6a, #2e7d32);
+}
+
+.result {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+*/
